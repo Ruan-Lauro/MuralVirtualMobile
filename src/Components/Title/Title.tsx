@@ -9,7 +9,7 @@ type AuthShowMuralProps = {
     category: string;
 }
 
-export default function ShowMural({ name, img ,category}: AuthShowMuralProps){
+export default function Title({ name, img ,category}: AuthShowMuralProps){
 
    
    

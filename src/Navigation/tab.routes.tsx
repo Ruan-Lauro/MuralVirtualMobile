@@ -1,7 +1,5 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import { StyleSheet, Text, View, Image, Button } from 'react-native';
-import Login from '../Screens/Login/Login'
-import Register from '../Screens/Register/Register'
 import Home from '../Screens/Home/Home';
 import UserPost from '../Screens/UserPost/UserPost';
 import ChooseGroup from '../Screens/ChooseGroup/ChooseGroup';
@@ -20,11 +18,10 @@ export default function TabRoutes(){
         headerShown: false, 
         tabBarShowLabel: false,
         tabBarStyle:{
+            alignSelf:"center",
             height: 80,
+            width: "88%",
             borderTopWidth: 0,
-            bottom: 16,
-            marginLeft: 30,
-            marginRight: 30,
             borderRadius: 40,
         }
         

@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     ShowMuralText:{
         fontWeight:"500",
         fontSize:16,
+        marginBottom: -3,
     },
     ShowMuralTextSecond:{
         fontSize:14,

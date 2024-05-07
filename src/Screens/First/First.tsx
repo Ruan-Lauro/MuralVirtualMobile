@@ -5,6 +5,9 @@ import { useNavigation } from '@react-navigation/native';
 import Login from '../Login/Login';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../type';
+import TabRoutes from '../../Navigation/tab.routes';
+
+
 
 
 type RegisterScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Register'>;
@@ -19,6 +22,7 @@ export default function First({navigation}:Props) {
 
   return (
     <View style={styles.container}>
+      
       <Image  source={require('../../../assets/LogoMural.png')} style={styles.imgLogo}/>    
     
       <View style={styles.firstInfor}>
@@ -40,6 +44,7 @@ export default function First({navigation}:Props) {
         }}/>
       </View>
       <Text style={styles.textFirstBottom}>Ao fazer o <Text style={styles.textStrong}>cadastro</Text>, você está concordando com <Text style={styles.textStrong}>nossos termos</Text></Text>
+      
     </View>
   );
 }
@@ -50,6 +55,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffff',
     alignItems: 'center',
     justifyContent: 'center',
+    position: "relative",
   },
   viewbutton:{
     display:"flex",

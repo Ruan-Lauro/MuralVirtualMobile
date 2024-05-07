@@ -2,12 +2,11 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
     allTitle: {
-        position: "absolute",
         flexDirection: "row",
         width: "100%",
-        top:25,
         justifyContent:"space-between",
         alignItems:"center",
+        marginTop: 25,
     },
     imgViewLogo:{
 

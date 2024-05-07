@@ -14,6 +14,7 @@ import { StatusBar } from 'react-native';
 import SeeMurals from './src/Screens/SeeMurals/SeeMurals';
 import ChooseGroup from './src/Screens/ChooseGroup/ChooseGroup';
 
+
 export default function App() {
 
   const Stack = createNativeStackNavigator();
@@ -25,8 +26,7 @@ export default function App() {
    <NavigationContainer>
     <StatusBar backgroundColor="white" barStyle="light-content" />
       <Stack.Navigator screenOptions={{headerShown: false}}>
-        
-      <Stack.Screen name='First' component={First}/>   
+        <Stack.Screen name='First' component={First}/>   
         <Stack.Screen name='Register' component={Register}/>
         <Stack.Screen name='Login' component={Login}/>
         <Stack.Screen name='ChooseOne' component={ChooseOne}/>  
@@ -36,7 +36,7 @@ export default function App() {
         <Stack.Screen name='Group' component={Group}/>
         <Stack.Screen name='Mural' component={Mural}/>
         <Stack.Screen name='SeeMurals' component={SeeMurals}/> 
-        {/* <Stack.Screen name='ChooseGroup' component={ChooseGroup}/>    */}
+        <Stack.Screen name='ChooseGroup' component={ChooseGroup}/>   
       </Stack.Navigator>
    </NavigationContainer>
   );

@@ -1,14 +1,14 @@
 import api from "../Services/Api";
 
 interface useDeleteMuralResult {
-  authenticationRM: (id: number) => Promise<string>;
+  authenticationRM: (id: number | string) => Promise<string>;
 }
 
 
 
 export const useDeleteMural = (): useDeleteMuralResult => {
 
-  const authenticationRM = async (id: number) => {
+  const authenticationRM = async (id: number | string) => {
     try {
       const response = await api.delete('/murals/'+id);
 

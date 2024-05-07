@@ -90,7 +90,7 @@ export default function SeeMural({navigation}:Props) {
                     Murals.map((value)=>(
                         <ShowMural authentication={()=>{
                             deleteMural(value.id)
-                        }} img={value.imgMural} name={value.name} idMural={value.id} key={value.id}/>
+                        }} img={value.imgMural} name={value.name} idMural={value.id} key={value.id} canceled={true}/>
                     ))
                 ): null}
             </View>

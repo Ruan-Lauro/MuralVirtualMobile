@@ -7,10 +7,11 @@ type AuthShowMuralProps = {
     img: string;
     authentication: () => void ;
     name: string;
-    idMural: number;
+    idMural: number | string;
+    canceled: boolean;
 }
 
-export default function ShowMural({img, authentication, name, idMural}: AuthShowMuralProps){
+export default function ShowMural({img, authentication, name, idMural, canceled}: AuthShowMuralProps){
 
     const {authenticationRM} = useDeleteMural()
    
@@ -23,10 +24,12 @@ export default function ShowMural({img, authentication, name, idMural}: AuthShow
                     <Text style={styles.ShowMuralTextSecond} >@{name.toLowerCase()}</Text>
                 </View>
             </View>
-            <Text style={{marginRight: 25, fontSize: 20}} onPress={()=>{
-                authenticationRM(idMural)
-                authentication()
-            }}>X</Text>
+            {canceled?(
+                <Text style={{marginRight: 25, fontSize: 20}} onPress={()=>{
+                    authenticationRM(idMural)
+                    authentication()
+                }}>X</Text>
+            ): null}
         </View>
     );
 }

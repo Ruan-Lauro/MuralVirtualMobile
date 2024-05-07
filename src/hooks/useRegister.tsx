@@ -9,6 +9,7 @@ export type user = {
     confirmPassword: string,
     isAdmin: boolean,
     id?: string,
+    profile_image?: string,
   }
 
 interface UseRegisterResult {

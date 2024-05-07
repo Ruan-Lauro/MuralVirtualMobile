@@ -11,7 +11,7 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../type';
 import React from 'react';
 
-type RegisterScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Register'>;
+type RegisterScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Login'>;
 
 type Props = {
   navigation: RegisterScreenNavigationProp;
@@ -45,6 +45,7 @@ export default function Login({navigation}:Props) {
         AsyncStorage.setItem('@userInfor', JSON.stringify(data))
         .then(() => {
           console.log('Informações do usuário armazenadas com sucesso.');
+          navigation.navigate('ChooseGroup')
         })
         .catch((error) => {
           console.error('Erro ao armazenar informações do usuário:', error);
